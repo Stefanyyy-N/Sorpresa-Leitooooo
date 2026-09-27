@@ -1,0 +1,500 @@
+<!-- =========================
+     AUTOS DEPORTIVOS REALISTAS
+     ========================= -->
+
+<div class="autos-volando">
+
+  <!-- AUTO 1 - TOYOTA ROJO -->
+  <div class="auto auto-toyota">
+    <div class="auto-brillo"></div>
+
+    <div class="carro">
+      <div class="carro-techo"></div>
+      <div class="carro-vidrio"></div>
+      <div class="carro-capó"></div>
+      <div class="carro-parachoques"></div>
+
+      <div class="rueda rueda1"></div>
+      <div class="rueda rueda2"></div>
+
+      <div class="luz luz1"></div>
+      <div class="luz luz2"></div>
+
+      <div class="logo-toyota">TOYOTA</div>
+    </div>
+  </div>
+
+  <!-- AUTO 2 -->
+  <div class="auto auto2">
+    <div class="carro deportivo azul">
+      <div class="carro-techo"></div>
+      <div class="carro-vidrio"></div>
+      <div class="carro-capó"></div>
+      <div class="carro-parachoques"></div>
+
+      <div class="rueda rueda1"></div>
+      <div class="rueda rueda2"></div>
+
+      <div class="luz luz1"></div>
+      <div class="luz luz2"></div>
+    </div>
+  </div>
+
+  <!-- AUTO 3 -->
+  <div class="auto auto3">
+    <div class="carro deportivo negro">
+      <div class="carro-techo"></div>
+      <div class="carro-vidrio"></div>
+      <div class="carro-capó"></div>
+      <div class="carro-parachoques"></div>
+
+      <div class="rueda rueda1"></div>
+      <div class="rueda rueda2"></div>
+
+      <div class="luz luz1"></div>
+      <div class="luz luz2"></div>
+    </div>
+  </div>
+
+  <!-- AUTO 4 -->
+  <div class="auto auto4">
+    <div class="carro deportivo plateado">
+      <div class="carro-techo"></div>
+      <div class="carro-vidrio"></div>
+      <div class="carro-capó"></div>
+      <div class="carro-parachoques"></div>
+
+      <div class="rueda rueda1"></div>
+      <div class="rueda rueda2"></div>
+
+      <div class="luz luz1"></div>
+      <div class="luz luz2"></div>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+
+.autos-volando {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+
+/* =========================
+   AUTOS
+   ========================= */
+
+.auto {
+  position: absolute;
+  width: 330px;
+  height: 160px;
+  perspective: 800px;
+  animation: volar 12s linear infinite;
+}
+
+
+/* POSICIONES */
+
+.auto-toyota {
+  left: -350px;
+  top: 18%;
+  animation-delay: 0s;
+}
+
+.auto2 {
+  left: -400px;
+  top: 42%;
+  animation-delay: 3s;
+}
+
+.auto3 {
+  left: -350px;
+  top: 65%;
+  animation-delay: 6s;
+}
+
+.auto4 {
+  left: -400px;
+  top: 30%;
+  animation-delay: 9s;
+}
+
+
+/* =========================
+   CUERPO DEL AUTO
+   ========================= */
+
+.carro {
+  position: relative;
+  width: 300px;
+  height: 105px;
+  top: 35px;
+
+  border-radius: 70px 100px 25px 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5b5b 0%,
+      #c40000 35%,
+      #760000 65%,
+      #280000 100%
+    );
+
+  box-shadow:
+    0 18px 30px rgba(0,0,0,.55),
+    inset 0 8px 10px rgba(255,255,255,.35),
+    inset 0 -12px 18px rgba(0,0,0,.65);
+
+  transform: skewX(-5deg);
+
+  border: 2px solid rgba(255,255,255,.25);
+}
+
+
+/* AUTOS DEPORTIVOS */
+
+.deportivo.azul {
+  background:
+    linear-gradient(
+      145deg,
+      #4fb7ff,
+      #0053a6 45%,
+      #001b3d 100%
+    );
+}
+
+.deportivo.negro {
+  background:
+    linear-gradient(
+      145deg,
+      #555,
+      #111 45%,
+      #000
+    );
+}
+
+.deportivo.plateado {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #9b9b9b 45%,
+      #303030
+    );
+}
+
+
+/* =========================
+   TECHO
+   ========================= */
+
+.carro-techo {
+  position: absolute;
+
+  width: 145px;
+  height: 65px;
+
+  left: 75px;
+  top: -45px;
+
+  border-radius: 75px 90px 10px 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #222,
+      #06101b,
+      #000
+    );
+
+  box-shadow:
+    inset 0 5px 10px rgba(255,255,255,.18),
+    0 -5px 15px rgba(0,0,0,.5);
+}
+
+
+/* =========================
+   VIDRIOS
+   ========================= */
+
+.carro-vidrio {
+  position: absolute;
+
+  width: 120px;
+  height: 48px;
+
+  left: 88px;
+  top: -35px;
+
+  border-radius: 40px 55px 5px 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8fdcff,
+      #183f60 45%,
+      #020b13 100%
+    );
+
+  border: 2px solid rgba(255,255,255,.35);
+
+  box-shadow:
+    inset 8px 5px 12px rgba(255,255,255,.22);
+}
+
+
+/* =========================
+   CAPÓ
+   ========================= */
+
+.carro-capó {
+  position: absolute;
+
+  width: 100px;
+  height: 35px;
+
+  left: 170px;
+  top: 20px;
+
+  border-radius: 10px 60px 5px 5px;
+
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.35),
+    transparent 50%
+  );
+}
+
+
+/* =========================
+   PARACHOQUES
+   ========================= */
+
+.carro-parachoques {
+  position: absolute;
+
+  width: 70px;
+  height: 25px;
+
+  right: -5px;
+  bottom: 5px;
+
+  border-radius: 20px;
+
+  background: #050505;
+
+  box-shadow:
+    inset 0 3px 5px rgba(255,255,255,.2);
+}
+
+
+/* =========================
+   RUEDAS
+   ========================= */
+
+.rueda {
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  bottom: -25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #777 0 12%,
+      #222 13% 28%,
+      #050505 29% 60%,
+      #111 61% 100%
+    );
+
+  border: 4px solid #080808;
+
+  box-shadow:
+    0 5px 12px rgba(0,0,0,.7);
+}
+
+.rueda1 {
+  left: 45px;
+}
+
+.rueda2 {
+  right: 45px;
+}
+
+
+/* =========================
+   LUCES
+   ========================= */
+
+.luz {
+  position: absolute;
+
+  width: 35px;
+  height: 13px;
+
+  top: 30px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 12px white,
+    0 0 25px rgba(150,220,255,.9);
+}
+
+.luz1 {
+  right: 15px;
+}
+
+.luz2 {
+  right: 55px;
+}
+
+
+/* =========================
+   LOGO TOYOTA
+   ========================= */
+
+.logo-toyota {
+  position: absolute;
+
+  right: 55px;
+  top: 45px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: bold;
+
+  color: white;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 1px 3px black;
+}
+
+
+/* =========================
+   REFLEJO
+   ========================= */
+
+.auto-brillo {
+  position: absolute;
+
+  width: 230px;
+  height: 20px;
+
+  top: 55px;
+  left: 35px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+  );
+
+  transform: rotate(-8deg);
+
+  filter: blur(3px);
+
+  animation: brillo 2s infinite;
+}
+
+
+/* =========================
+   ANIMACIÓN DE VUELO
+   ========================= */
+
+@keyframes volar {
+
+  0% {
+    transform:
+      translateX(-400px)
+      translateY(100px)
+      rotate(-8deg)
+      scale(.75);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateX(55vw)
+      translateY(-50px)
+      rotate(3deg)
+      scale(1);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateX(120vw)
+      translateY(80px)
+      rotate(8deg)
+      scale(.8);
+
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes brillo {
+
+  0% {
+    opacity: .1;
+    transform: translateX(-80px) rotate(-8deg);
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: .1;
+    transform: translateX(100px) rotate(-8deg);
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .auto {
+    width: 220px;
+    transform: scale(.65);
+  }
+
+  .carro {
+    width: 280px;
+  }
+
+}
+
+</style>
